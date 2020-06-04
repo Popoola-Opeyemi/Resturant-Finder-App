@@ -1,0 +1,6 @@
+###
+GET https://developers.zomato.com/api/v2.1/search HTTP/1.1
+User-Agent: rest-client
+Content-Type: application/json
+user-key: 5ec79f16bb0e7b0165c5775f5cda9082
+

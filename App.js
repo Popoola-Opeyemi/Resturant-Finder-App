@@ -8,6 +8,7 @@ import LinkingConfiguration from './src/navigation/LinkingConfiguration';
 
 // Screens
 import SearchScreen from "./src/screens/SearchScreen"
+import ResultShowScreen from "./src/screens/ResultShowScreen"
 
 const Stack = createStackNavigator();
 
@@ -20,9 +21,10 @@ export default function App(props) {
     return (
       <View style={styles.container}>
         {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
-        <NavigationContainer linking={LinkingConfiguration}>
+        <NavigationContainer initialRouteName="Home" linking={LinkingConfiguration}>
           <Stack.Navigator>
-            <Stack.Screen name="Root" component={SearchScreen} />
+            <Stack.Screen name="Home" component={SearchScreen} />
+            <Stack.Screen name="Home-Details" component={ResultShowScreen} />
           </Stack.Navigator>
         </NavigationContainer>
       </View>
